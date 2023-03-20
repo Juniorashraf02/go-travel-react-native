@@ -54,8 +54,11 @@ const HomeScreen = () => {
           className="w-full h-full object-cover"
         />
 
-        <View className="absolute bottom-20 border-[#00BCC9] border-l-2 border-r-2 border-t-4 rounded-full w-24 h-24 items-center justify-center">
-          <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Discover")}
+          className="items-center justify-center"
+        >
+          <View className="absolute bottom-20 border-[#00BCC9] border-l-2 border-r-2 border-t-4 rounded-full w-24 h-24 items-center justify-center">
             <Animatable.View
               animation="pulse"
               easing="ease-in-out"
@@ -64,8 +67,8 @@ const HomeScreen = () => {
             >
               <Text className="text-3xl text-gray-50 font-bold">Go</Text>
             </Animatable.View>
-          </TouchableOpacity>
-        </View>
+          </View>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
